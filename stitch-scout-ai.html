@@ -1,0 +1,737 @@
+<!DOCTYPE html><html lang="en" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;family=Manrope:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "error-container": "#ffdad6", "on-primary-fixed-variant": "#44474a", "on-error": "#ffffff", "tertiary": "#110700", "error": "#ba1a1a", "on-tertiary-fixed-variant": "#5e4119", "on-secondary-fixed-variant": "#394b3d", "secondary": "#506354", "on-surface-variant": "#44474a", "surface-container-low": "#f3f4f3", "surface-container-highest": "#e2e2e2", "surface-variant": "#e2e2e2", "on-primary-fixed": "#191c1f", "surface": "#f9f9f8", "surface-tint": "#5c5f62", "surface-container-lowest": "#ffffff", "on-tertiary": "#ffffff", "secondary-fixed-dim": "#b7ccb9", "secondary-fixed": "#d3e8d5", "secondary-container": "#d0e5d2", "outline-variant": "#c5c6ca", "inverse-surface": "#2f3130", "on-secondary-container": "#546758", "on-secondary-fixed": "#0e1f13", "on-secondary": "#ffffff", "on-primary": "#ffffff", "on-tertiary-container": "#a68253", "surface-container": "#eeeeed", "tertiary-fixed-dim": "#eabf8c", "primary": "#070a0c", "on-tertiary-fixed": "#2a1800", "surface-container-high": "#e8e8e7", "primary-fixed-dim": "#c5c6ca", "background": "#f9f9f8", "primary-container": "#1e2124", "surface-dim": "#dadad9", "on-primary-container": "#86888c", "tertiary-fixed": "#ffddb6", "on-error-container": "#93000a", "on-background": "#1a1c1c", "tertiary-container": "#311c00", "inverse-on-surface": "#f1f1f0", "surface-bright": "#f9f9f8", "primary-fixed": "#e1e2e6", "inverse-primary": "#c5c6ca", "on-surface": "#1a1c1c", "outline": "#75777a" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter-mobile": "1rem", "space-sm": "0.5rem", "margin-desktop": "3rem", "space-lg": "1.5rem", "gutter": "1.5rem", "margin-mobile": "1.25rem", "margin": "2rem", "space-xl": "2.5rem", "space-xs": "0.25rem", "gutter-desktop": "2rem", "space-md": "1rem" }, "fontFamily": { "display-lg": [ "Newsreader" ], "headline-md": [ "Newsreader" ], "headline-sm": [ "Newsreader" ], "body-sm": [ "Manrope" ], "display-lg-mobile": [ "Newsreader" ], "code-sm": [ "JetBrains Mono" ], "headline-lg-mobile": [ "Newsreader" ], "headline-lg": [ "Newsreader" ], "label-sm": [ "JetBrains Mono" ], "body-md": [ "Manrope" ], "body-lg": [ "Newsreader" ], "label-md": [ "Manrope" ] }, "fontSize": { "display-lg": [ "48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "400" } ], "headline-md": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.005em", "fontWeight": "400" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "fontWeight": "500" } ], "body-sm": [ "13px", { "lineHeight": "20px", "fontWeight": "400" } ], "display-lg-mobile": [ "34px", { "lineHeight": "42px", "letterSpacing": "-0.015em", "fontWeight": "400" } ], "code-sm": [ "12px", { "lineHeight": "18px", "fontWeight": "400" } ], "headline-lg-mobile": [ "26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "headline-lg": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "label-sm": [ "11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" } ], "body-md": [ "15px", { "lineHeight": "24px", "fontWeight": "400" } ], "body-lg": [ "19px", { "lineHeight": "30px", "letterSpacing": "0.005em", "fontWeight": "400" } ], "label-md": [ "13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 h-16 bg-surface-container-lowest border-b border-surface-container-high px-6 flex items-center justify-between shadow-sm"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><img alt="Scout AI Emblem" class="h-8 w-8 object-contain rounded" src="https://lh3.googleusercontent.com/aida/AEtjO1U0t262hKM96RHqDFH283zu7F9oa0h3vAi12JvzBC2HxQ9C5YDTR_a-T4jwomkqYf0fIL4o_rRjChIuByITCVz08zLOpIGLgGSJF1yzLSBGKLmfR3mCsVzacOe0rMsWlTLOBggjuiR-WY6MHN1NkkpgXRTFoGuTGSRd-Kxd3iVyZ5p84Go_Jbnw2rNMIVr-fHAKP7B9EkTuj9g-RcFO_3Gz4YS3ThC7LaGjQL5Yfs5e4eE-AtBQLVc96g"><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-serif font-bold">Scout AI</span><span class="hidden lg:inline-flex items-center font-label-sm text-label-sm px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container font-medium">Grounded Research Agent</span></div><div class="hidden xl:flex items-center gap-space-xs px-2.5 py-1 rounded-full bg-surface-container-low border border-surface-container-high"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span><span class="font-label-sm text-label-sm text-secondary font-medium">Gemini 2.5 Active</span></div></div><nav class="hidden md:flex items-center gap-1 bg-surface-container-low p-1 rounded-lg border border-surface-container-high"><a aria-current="page" class="px-space-md py-1 rounded bg-surface-container-lowest text-primary font-semibold text-body-sm shadow-sm transition-colors" data-path="investigative-workspace" href="#">Workspace</a><a class="px-space-md py-1 rounded text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors text-body-sm" data-path="source-corpus" href="#">Corpus &amp; Provenance</a><a class="px-space-md py-1 rounded text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors text-body-sm" data-path="methodology-audit" href="#">Audit Log</a></nav><div class="flex items-center gap-space-sm"><div class="hidden sm:flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container-low border border-surface-container-high"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="font-code-sm text-code-sm text-on-surface-variant font-medium">API: Ready</span></div><button class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg border border-surface-container-high hover:bg-surface-container-low text-primary font-label-md text-label-md transition-colors" type="button"><span class="material-symbols-outlined text-[16px]">ios_share</span><span class="hidden sm:inline">Export</span></button><button class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg border border-surface-container-high hover:bg-surface-container-low text-primary font-label-md text-label-md transition-colors" type="button"><span class="material-symbols-outlined text-[16px]">menu_book</span><span class="hidden sm:inline">Docs</span></button><div class="w-8 h-8 rounded-full bg-primary hover:bg-secondary transition-colors cursor-pointer flex items-center justify-center text-on-primary ml-1 shadow-sm"><span class="material-symbols-outlined text-[18px]">person</span></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-64 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.02)] z-40 flex flex-col justify-between py-space-lg px-space-md"><div class="flex flex-col gap-space-lg"><div class="px-space-sm"><div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-space-sm">Grounding Telemetry</div><div class="flex flex-col gap-space-xs"><div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant"><span class="">Engine</span><span class="font-code-sm text-code-sm text-on-surface">gemini-2.5-pro</span></div><div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant"><span class="">Crawl Depth</span><span class="font-code-sm text-code-sm text-on-surface">Forensic</span></div><div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant"><span class="">Citations</span><span class="font-code-sm text-code-sm text-secondary font-medium">Verified</span></div></div></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-surface-container-high text-on-surface font-semibold rounded-lg"><a aria-current="page" class="flex items-center gap-space-md px-space-md py-2 transition-colors bg-surface-container-high text-on-surface font-semibold rounded-lg" data-path="investigative-workspace" href="#"><span class="material-symbols-outlined text-[18px]">terminal</span><span class="font-label-md text-label-md">Research Desk</span></a><a class="flex items-center gap-space-md px-space-md py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="source-corpus" href="#"><span class="material-symbols-outlined text-[18px]">library_books</span><span class="font-label-md text-label-md">Corpus Index</span></a><a class="flex items-center gap-space-md px-space-md py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="methodology-audit" href="#"><span class="material-symbols-outlined text-[18px]">fact_check</span><span class="font-label-md text-label-md">Audit Trail</span></a><a class="flex items-center gap-space-md px-space-md py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="system-parameters" href="#"><span class="material-symbols-outlined text-[18px]">tune</span><span class="font-label-md text-label-md">Agent Settings</span></a></nav></div><div class="px-space-sm pt-space-md"><div class="p-space-sm rounded bg-surface-container-lowest"><div class="flex items-center gap-space-xs text-secondary"><span class="material-symbols-outlined text-[16px]">verified</span><span class="font-label-sm text-label-sm">High-Trust Mode</span></div><p class="font-body-sm text-body-sm text-on-surface-variant mt-1">All extracted insights are pinned to verifiable web artifacts.</p></div></div></aside><div class="pl-64"><main class="relative pt-16 w-full min-h-screen bg-surface"><div class="flex flex-col w-full">
+<!-- Top Global Investigation Bar -->
+<section class="w-full px-gutter-desktop py-space-xl bg-surface-container-lowest shadow-sm">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+<!-- Query Header & Mode Chips -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div>
+<div class="flex items-center gap-space-xs text-secondary mb-1">
+<span class="material-symbols-outlined text-[16px]">travel_explore</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Forensic Synthesis Rig</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">Investigative Synthesis Desk</h1>
+</div>
+<!-- Telemetry Parameters -->
+<div class="flex flex-wrap items-center gap-space-sm bg-surface-container-low p-1.5 rounded-lg">
+<div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-lowest shadow-sm text-secondary">
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+<span class="font-code-sm text-code-sm font-medium">Gemini 2.5 Grounding</span>
+</div>
+<div class="flex items-center gap-space-xs px-space-sm py-1 rounded text-on-surface-variant font-label-sm text-label-sm">
+<span class="">Sources Cap:</span>
+<span class="font-code-sm text-code-sm text-primary font-semibold">8 Verified</span>
+</div>
+<div class="flex items-center gap-space-xs px-space-sm py-1 rounded text-on-surface-variant font-label-sm text-label-sm">
+<span class="">Audit:</span>
+<span class="text-secondary font-medium">Strict (Zero-Hallucination)</span>
+</div>
+</div>
+</div>
+<!-- Main Search Box -->
+<div class="relative flex flex-col lg:flex-row gap-space-sm items-stretch">
+<div class="relative flex-1 bg-surface-container-lowest rounded-xl shadow-sm flex items-center p-2">
+<span class="material-symbols-outlined text-outline ml-3 mr-2 text-[22px]">psychology_alt</span>
+<input class="w-full bg-transparent text-primary font-body-md text-body-md focus:outline-none placeholder:text-outline" id="query-input" placeholder="Investigate any question, market trend, scientific claim, or emerging policy..." type="text" value="Commercial viability of solid-state EV batteries by 2030">
+<button class="p-1 rounded text-outline hover:text-primary transition-colors mr-1" id="clear-query-btn">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+</button>
+</div>
+<button class="inline-flex items-center justify-center gap-space-sm px-space-xl py-3 rounded-xl bg-primary hover:bg-secondary text-on-primary font-label-md text-label-md transition-all shadow-md hover:shadow-lg active:scale-[0.99] whitespace-nowrap" id="btn-run-investigation">
+<span class="material-symbols-outlined text-[20px]">manage_search</span>
+<span class="">Initialize Grounded Research</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-lowest/20 font-code-sm text-[10px]">⌥↵</span>
+</button>
+</div>
+<!-- Quick Preset Query Pills -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Historical Benchmarks:</span>
+<button class="preset-chip px-space-md py-1 rounded-full bg-surface-container text-on-surface-variant hover:bg-secondary-container hover:text-on-secondary-container font-label-sm text-label-sm transition-all text-left" data-query="Commercial viability of solid-state EV batteries by 2030">
+          • Solid-state EV batteries by 2030
+        </button>
+<button class="preset-chip px-space-md py-1 rounded-full bg-surface-container text-on-surface-variant hover:bg-secondary-container hover:text-on-secondary-container font-label-sm text-label-sm transition-all text-left" data-query="Regulatory frameworks for generative AI models in EU vs US">
+          • Generative AI regulatory rift: EU vs US
+        </button>
+<button class="preset-chip px-space-md py-1 rounded-full bg-surface-container text-on-surface-variant hover:bg-secondary-container hover:text-on-secondary-container font-label-sm text-label-sm transition-all text-left" data-query="Advances in ambient temperature superconductor replications">
+          • Ambient superconductor replications
+        </button>
+<button class="preset-chip px-space-md py-1 rounded-full bg-surface-container text-on-surface-variant hover:bg-secondary-container hover:text-on-secondary-container font-label-sm text-label-sm transition-all text-left" data-query="Impact of weight-loss GLP-1 agonists on healthcare economics">
+          • GLP-1 agonists healthcare economics
+        </button>
+</div>
+</div>
+</section>
+<!-- Workspace Subheader / View Tabs -->
+<div class="w-full px-gutter-desktop py-space-sm bg-surface-container-low flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span>
+<span class="">Provenance Target: <strong class="text-primary font-semibold">Grounded Corpus (8 Documents)</strong></span>
+<span class="mx-2 text-outline">/</span>
+<span class="">Execution Hash: <code class="font-code-sm text-code-sm text-secondary bg-surface-container-lowest px-1.5 py-0.5 rounded">0x8f2d..a31e</code></span>
+</div>
+<!-- Mode Switcher -->
+<div class="flex items-center p-0.5 rounded-lg bg-surface-container-highest">
+<button class="view-tab px-space-md py-1 rounded-lg bg-surface-container-lowest text-primary font-label-md text-label-md shadow-sm" id="tab-report">
+        Synthesized Briefing
+      </button>
+<button class="view-tab px-space-md py-1 rounded-lg text-on-surface-variant hover:text-primary font-label-md text-label-md transition-colors" id="tab-timeline">
+        Live Execution Logs
+      </button>
+<button class="view-tab px-space-md py-1 rounded-lg text-on-surface-variant hover:text-primary font-label-md text-label-md transition-colors" id="tab-json">
+        Grounding Metadata (JSON)
+      </button>
+</div>
+</div>
+<!-- Primary Two-Column Investigative Workspace -->
+<div class="w-full px-gutter-desktop py-space-lg">
+<div class="max-w-7xl mx-auto grid grid-cols-1 xl:grid-cols-12 gap-gutter-desktop items-start">
+<!-- LEFT COLUMN: Grounding Audit, Execution Trail & Source Index (Col 1-4) -->
+<aside class="xl:col-span-4 flex flex-col gap-space-lg">
+<!-- Execution Step Timeline Panel -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary">conversion_path</span>
+<h2 class="font-label-md text-label-md text-primary tracking-wide uppercase">Reasoning Trajectory</h2>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">4.2s runtime</span>
+</div>
+<!-- Vertical Timeline Steps -->
+<div class="relative flex flex-col gap-space-md pl-6 before:content-[''] before:absolute before:left-2 before:top-2 before:bottom-2 before:w-[2px] before:bg-surface-container-highest">
+<!-- Step 1 -->
+<div class="relative flex flex-col">
+<span class="absolute -left-6 top-1 w-3 h-3 rounded-full bg-secondary ring-4 ring-surface-container-lowest"></span>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-semibold">1. Sanitization &amp; Scoping</span>
+<span class="font-code-sm text-code-sm text-outline">0.12s</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">58 chars parsed. Extracted key entities: <code class="font-code-sm text-code-sm bg-surface-container-low px-1 rounded">Solid-state</code>, <code class="font-code-sm text-code-sm bg-surface-container-low px-1 rounded">EV commercialization</code>, <code class="font-code-sm text-code-sm bg-surface-container-low px-1 rounded">2030 threshold</code>.</p>
+</div>
+<!-- Step 2 -->
+<div class="relative flex flex-col">
+<span class="absolute -left-6 top-1 w-3 h-3 rounded-full bg-secondary ring-4 ring-surface-container-lowest"></span>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-semibold">2. Hypothesis Decomposition</span>
+<span class="font-code-sm text-code-sm text-outline">0.45s</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Dispatched 4 targeted interrogatives (Electrolytes, Manufacturing Capex, OEM timelines, Material yields).</p>
+</div>
+<!-- Step 3 -->
+<div class="relative flex flex-col">
+<span class="absolute -left-6 top-1 w-3 h-3 rounded-full bg-secondary ring-4 ring-surface-container-lowest"></span>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-semibold">3. Tool Invocation: Web Grounding</span>
+<span class="font-code-sm text-code-sm text-outline">1.84s</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Invoked <code class="font-code-sm text-code-sm text-secondary">gemini-2.5-pro</code> with Google Search retriever. Filtered 34 candidate scrapes to 8 high-signal sources.</p>
+</div>
+<!-- Step 4 -->
+<div class="relative flex flex-col">
+<span class="absolute -left-6 top-1 w-3 h-3 rounded-full bg-secondary ring-4 ring-surface-container-lowest"></span>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-semibold">4. Grounding &amp; Cross-Audit</span>
+<span class="font-code-sm text-code-sm text-outline">0.91s</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">14 discrete claims pinned to source chunks. Zero unreferenced synthetic assertions flagged.</p>
+</div>
+<!-- Step 5 -->
+<div class="relative flex flex-col">
+<span class="absolute -left-6 top-1 w-3 h-3 rounded-full bg-primary ring-4 ring-surface-container-lowest"></span>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-semibold">5. Editorial Compilation Finalized</span>
+<span class="font-code-sm text-code-sm text-secondary font-medium">Complete</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Academic briefing rendered with interactive source citation bindings.</p>
+</div>
+</div>
+</div>
+<!-- Hypotheses Breakdown Card -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs pb-space-xs">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">schema</span>
+<h3 class="font-label-md text-label-md text-primary tracking-wide uppercase">Sub-Hypotheses Formulated</h3>
+</div>
+<div class="flex flex-col gap-space-xs text-body-sm font-body-sm text-on-surface-variant">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-space-sm">
+<span class="font-code-sm text-code-sm text-secondary font-semibold">H1</span>
+<span class="">Solid ceramic separators maintain ionic conductivity but face severe brittle fracture at roll-to-roll scale.</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-space-sm">
+<span class="font-code-sm text-code-sm text-secondary font-semibold">H2</span>
+<span class="">Automotive OEM roadmaps (Toyota, VW/QuantumScape, BMW) converge on 2027 pilot rollouts rather than volume parity.</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-space-sm">
+<span class="font-code-sm text-code-sm text-secondary font-semibold">H3</span>
+<span class="">Cell-level cost ($/kWh) parity against traditional NMC/LFP will remain inverted through at least 2031.</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-space-sm">
+<span class="font-code-sm text-code-sm text-secondary font-semibold">H4</span>
+<span class="">Lithium metal anode dendrite formation requires constant 5-8 MPa stack pressure in automotive packaging.</span>
+</div>
+</div>
+</div>
+<!-- Verified Source Corpus Card -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary">inventory_2</span>
+<h3 class="font-label-md text-label-md text-primary tracking-wide uppercase">Corpus Index (6 Pinned)</h3>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Click to locate</span>
+</div>
+<div class="flex flex-col gap-space-sm" id="source-cards-container">
+<!-- Source Item 1 -->
+<div class="source-card p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer group" data-source-id="1">
+<div class="flex items-center justify-between mb-1">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest font-code-sm text-[11px] text-primary font-semibold">[1]</span>
+<span class="font-label-sm text-[11px] text-secondary bg-secondary-container/60 px-1.5 py-0.5 rounded">99% match</span>
+</div>
+<h4 class="font-body-sm font-semibold text-primary group-hover:text-secondary line-clamp-1">BloombergNEF Energy Storage Outlook: Solid-State Battery Timeline</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant line-clamp-2 mt-0.5">Cell costs projected at $145/kWh in 2028 vs $75/kWh for advanced sodium &amp; LFP chemistries.</p>
+<div class="mt-2 flex items-center justify-between text-outline font-code-sm text-[10px]">
+<span class="">bnef.com/insights</span>
+<span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</div>
+</div>
+<!-- Source Item 2 -->
+<div class="source-card p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer group" data-source-id="2">
+<div class="flex items-center justify-between mb-1">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest font-code-sm text-[11px] text-primary font-semibold">[2]</span>
+<span class="font-label-sm text-[11px] text-secondary bg-secondary-container/60 px-1.5 py-0.5 rounded">98% match</span>
+</div>
+<h4 class="font-body-sm font-semibold text-primary group-hover:text-secondary line-clamp-1">Nature Energy: Critical Current Density Limits in Sulfide Electrolytes</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant line-clamp-2 mt-0.5">Interfacial degradation between lithium metal and sulfide ceramics under &gt;5 mA/cm² fast-charge stress.</p>
+<div class="mt-2 flex items-center justify-between text-outline font-code-sm text-[10px]">
+<span class="">nature.com/articles/nenergy</span>
+<span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</div>
+</div>
+<!-- Source Item 3 -->
+<div class="source-card p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer group" data-source-id="3">
+<div class="flex items-center justify-between mb-1">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest font-code-sm text-[11px] text-primary font-semibold">[3]</span>
+<span class="font-label-sm text-[11px] text-secondary bg-secondary-container/60 px-1.5 py-0.5 rounded">97% match</span>
+</div>
+<h4 class="font-body-sm font-semibold text-primary group-hover:text-secondary line-clamp-1">Toyota Motor Corp Technical Briefing: Next-Gen Battery Production Roadmap</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant line-clamp-2 mt-0.5">Targeting 2027–2028 commercial debut with Idemitsu Kosan partnership for sulfide solid electrolytes.</p>
+<div class="mt-2 flex items-center justify-between text-outline font-code-sm text-[10px]">
+<span class="">global.toyota/en/mobility</span>
+<span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</div>
+</div>
+<!-- Source Item 4 -->
+<div class="source-card p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer group" data-source-id="4">
+<div class="flex items-center justify-between mb-1">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest font-code-sm text-[11px] text-primary font-semibold">[4]</span>
+<span class="font-label-sm text-[11px] text-secondary bg-secondary-container/60 px-1.5 py-0.5 rounded">96% match</span>
+</div>
+<h4 class="font-body-sm font-semibold text-primary group-hover:text-secondary line-clamp-1">US Department of Energy: Advanced Vehicle Battery Technologies Assessment</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant line-clamp-2 mt-0.5">Identifies stack pressure engineering as primary pack-level volumetric penalty in road tests.</p>
+<div class="mt-2 flex items-center justify-between text-outline font-code-sm text-[10px]">
+<span class="">energy.gov/eere/vehicles</span>
+<span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</div>
+</div>
+<!-- Source Item 5 -->
+<div class="source-card p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer group" data-source-id="5">
+<div class="flex items-center justify-between mb-1">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest font-code-sm text-[11px] text-primary font-semibold">[5]</span>
+<span class="font-label-sm text-[11px] text-secondary bg-secondary-container/60 px-1.5 py-0.5 rounded">94% match</span>
+</div>
+<h4 class="font-body-sm font-semibold text-primary group-hover:text-secondary line-clamp-1">QuantumScape Q4 Shareholder Synthesis: Cobra Process Rollout</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant line-clamp-2 mt-0.5">High-speed ceramic separator sintering yields; alpha-2 cell shipments to Volkswagen PowerCo.</p>
+<div class="mt-2 flex items-center justify-between text-outline font-code-sm text-[10px]">
+<span class="">quantumscape.com/investors</span>
+<span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</div>
+</div>
+<!-- Source Item 6 -->
+<div class="source-card p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer group" data-source-id="6">
+<div class="flex items-center justify-between mb-1">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest font-code-sm text-[11px] text-primary font-semibold">[6]</span>
+<span class="font-label-sm text-[11px] text-secondary bg-secondary-container/60 px-1.5 py-0.5 rounded">92% match</span>
+</div>
+<h4 class="font-body-sm font-semibold text-primary group-hover:text-secondary line-clamp-1">McKinsey &amp; Company: Battery 2030 Resilient Supply Chains</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant line-clamp-2 mt-0.5">Global solid-state market share forecasted at under 3% of total GWh demand before 2032.</p>
+<div class="mt-2 flex items-center justify-between text-outline font-code-sm text-[10px]">
+<span class="">mckinsey.com/industries/automotive</span>
+<span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</div>
+</div>
+</div>
+</div>
+</aside>
+<!-- RIGHT COLUMN: Interactive Editorial Document Core (Col 5-12) -->
+<main class="xl:col-span-8 flex flex-col gap-space-lg">
+<!-- View 1: Editorial Research Report (Default) -->
+<article class="bg-surface-container-lowest rounded-xl p-space-lg sm:p-space-xl shadow-md flex flex-col gap-space-xl" id="view-report">
+<!-- Document Header -->
+<div class="flex flex-col gap-space-md pb-space-lg border-b border-surface-container-high">
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs text-secondary font-label-sm text-label-sm bg-secondary-container px-space-sm py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+<span class="">100% Grounded via Google Search API</span>
+</div>
+<!-- Action Toolbar -->
+<div class="flex items-center gap-space-xs">
+<button class="inline-flex items-center gap-space-xs px-space-md py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md transition-colors" id="btn-copy-report">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+<span class="">Copy Report</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md transition-colors" onclick="window.print()">
+<span class="material-symbols-outlined text-[16px]">print</span>
+<span class="">Print</span>
+</button>
+</div>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight font-serif" id="report-title">
+              Commercial Viability and Mass Production Timeline for Solid-State EV Batteries Toward the 2030 Horizon
+            </h2>
+<div class="flex flex-wrap items-center gap-y-2 gap-x-6 text-on-surface-variant font-body-sm text-body-sm">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px]">event</span> March 2025 Synthesis</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px]">fingerprint</span> Scope: Automotive Pack Deployment</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px]">speed</span> 8 Grounded Claims</span>
+</div>
+</div>
+<!-- Section 1: Executive Summary -->
+<section class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-secondary">
+<span class="material-symbols-outlined text-[20px]">overview</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">1. Executive Summary</h3>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
+              Solid-state lithium-metal batteries (SSBs) will achieve commercial automotive reality within high-end flagship vehicles between 2026 and 2028, but broad passenger-vehicle economic parity will not materialize before 2030 <button class="cite-badge px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container font-code-sm text-code-sm hover:ring-2 hover:ring-secondary transition-all" data-cite="1">[1]</button><button class="cite-badge ml-1 px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container font-code-sm text-code-sm hover:ring-2 hover:ring-secondary transition-all" data-cite="3">[3]</button>. While prototype pouch and prismatic cells demonstrate volumetric energy densities exceeding 400–450 Wh/kg, manufacturing bottlenecks—predominantly high-temperature sintering yields of fragile ceramic separators and interfacial impedance under cycling—severely suppress early scale-up economics <button class="cite-badge px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container font-code-sm text-code-sm hover:ring-2 hover:ring-secondary transition-all" data-cite="5">[5]</button>. Consequently, solid-state will comprise less than 3.5% of total electric vehicle battery demand by 2030 <button class="cite-badge px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container font-code-sm text-code-sm hover:ring-2 hover:ring-secondary transition-all" data-cite="6">[6]</button>.
+            </p>
+</section>
+<!-- Section 2: Key Grounded Metrics & Findings -->
+<section class="flex flex-col gap-space-md">
+<div class="flex items-center gap-space-xs text-secondary">
+<span class="material-symbols-outlined text-[20px]">monitoring</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">2. Analytical Findings &amp; Techno-Economic Benchmarks</h3>
+</div>
+<!-- Visual Comparison Matrix Card -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Cell Energy Density</span>
+<span class="font-headline-md text-headline-md text-primary font-serif">450–500 <span class="text-body-sm font-sans text-on-surface-variant">Wh/kg</span></span>
+<span class="font-body-sm text-body-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> +60% vs. Tier-1 NMC955
+                </span>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5 mt-2">
+<div class="bg-secondary h-1.5 rounded-full w-[85%]"></div>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Projected 2028 Cell Cost</span>
+<span class="font-headline-md text-headline-md text-primary font-serif">$145 <span class="text-body-sm font-sans text-on-surface-variant">/ kWh</span></span>
+<span class="font-body-sm text-body-sm text-error flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span> +93% over LFP ($75/kWh)
+                </span>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5 mt-2">
+<div class="bg-error h-1.5 rounded-full w-[65%]"></div>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Automotive Adoption 2030</span>
+<span class="font-headline-md text-headline-md text-primary font-serif">&lt; 3.0% <span class="text-body-sm font-sans text-on-surface-variant">Global GWh</span></span>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">speed</span> High-Margin Supercars First
+                </span>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5 mt-2">
+<div class="bg-primary h-1.5 rounded-full w-[20%]"></div>
+</div>
+</div>
+</div>
+<!-- Bulleted Insights with Grounding Pins -->
+<div class="flex flex-col gap-space-md mt-space-sm text-body-md text-on-surface">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">verified</span>
+<div class="">
+<strong class="text-primary font-semibold">OEM Production Milestones:</strong> Toyota and Idemitsu have confirmed low-volume line commissioning targeted for 2027–2028 <button class="cite-badge px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container font-code-sm text-code-sm hover:ring-2 hover:ring-secondary transition-all" data-cite="3">[3]</button>. Volkswagen’s battery unit PowerCo continues endurance validation of QuantumScape’s anodeless 24-layer solid-state platform <button class="cite-badge px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container font-code-sm text-code-sm hover:ring-2 hover:ring-secondary transition-all" data-cite="5">[5]</button>.
+                </div>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">verified</span>
+<div class="">
+<strong class="text-primary font-semibold">Cost Curve Divergence:</strong> Continuous dry-coating and roll-to-roll separator equipment capex remains 3.2x higher than standard liquid-electrolyte battery gigafactories. Cost parity at the pack level cannot converge until dry-room humidity control tolerances are relaxed <button class="cite-badge px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container font-code-sm text-code-sm hover:ring-2 hover:ring-secondary transition-all" data-cite="1">[1]</button><button class="cite-badge ml-1 px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container font-code-sm text-code-sm hover:ring-2 hover:ring-secondary transition-all" data-cite="6">[6]</button>.
+                </div>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">verified</span>
+<div class="">
+<strong class="text-primary font-semibold">Electrolyte Formulation Schism:</strong> Two rival tracks dominate: inorganic sulfide-based glasses (favored by Japanese OEMs for highest ionic conductivity) and oxide/polymer composites (favored by Chinese conglomerates due to atmospheric moisture stability) <button class="cite-badge px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container font-code-sm text-code-sm hover:ring-2 hover:ring-secondary transition-all" data-cite="2">[2]</button>.
+                </div>
+</div>
+</div>
+</section>
+<!-- Section 3: Strategic Opportunities & Safety Gains -->
+<section class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-secondary">
+<span class="material-symbols-outlined text-[20px]">military_tech</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">3. Benefits &amp; Strategic Value Drivers</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-xs">
+<h4 class="font-headline-sm text-[17px] text-primary">Non-Flammable Thermal Stability</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Elimination of combustible organic liquid solvents shifts thermal runaway onset thresholds past 180°C. This substantially downsizes active cooling loops and pack-level fire barriers <button class="cite-badge px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container font-code-sm text-code-sm hover:ring-2 hover:ring-secondary transition-all" data-cite="4">[4]</button>.</p>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-xs">
+<h4 class="font-headline-sm text-[17px] text-primary">Ultra-Fast 12-Minute DC Charging</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Lithium-metal systems with high critical current density avoid the traditional graphite plating barriers that throttle cold-weather charge rates in existing EV fleets <button class="cite-badge px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container font-code-sm text-code-sm hover:ring-2 hover:ring-secondary transition-all" data-cite="2">[2]</button>.</p>
+</div>
+</div>
+</section>
+<!-- Section 4: Critical Bottlenecks & Failure Modes -->
+<section class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-secondary">
+<span class="material-symbols-outlined text-[20px]">warning</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">4. Critical Risks &amp; Engineering Roadblocks</h3>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container-low flex flex-col gap-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-semibold">1. Dendrite Infiltration at Grain Boundaries</span>
+<span class="font-label-sm text-label-sm text-error bg-error-container/40 px-2 py-0.5 rounded">High Severity</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">At charge densities &gt;5 mA/cm², metallic lithium deposits creep through micro-cracks in rigid ceramic electrolytes, inducing internal short circuits after fewer than 600 cycles <button class="cite-badge px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container font-code-sm text-code-sm hover:ring-2 hover:ring-secondary transition-all" data-cite="2">[2]</button>.</p>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-semibold">2. Mandatory Stack Pressure Overhead</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-highest px-2 py-0.5 rounded">Packaging Penalty</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Cells require active mechanical clamping between 3 to 8 MPa to prevent void formation as lithium volume fluctuates up to 20% during discharge. This mechanical hardware degrades gravimetric pack benefits <button class="cite-badge px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container font-code-sm text-code-sm hover:ring-2 hover:ring-secondary transition-all" data-cite="4">[4]</button>.</p>
+</div>
+</div>
+</section>
+<!-- Section 5: Methodology & Uncertainty Disclosure -->
+<section class="p-space-lg rounded-xl bg-surface-container-low flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-secondary">
+<span class="material-symbols-outlined text-[18px]">balance</span>
+<h4 class="font-label-md text-label-md text-primary uppercase tracking-wider">Methodology &amp; Epistemic Uncertainty</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Grounded findings reconcile publicly declared commercial targets (OEM investor decks) against peer-reviewed electrochemical stress data. A documented divergence exists: commercial roadmaps frequently rely on coin-cell or 1–4 layer pouch data, which historically underestimates yield degradation when transitioning to 24–40 layer industrial automotive cells.
+            </p>
+</section>
+<!-- Section 6: Verified Sources Table/Index -->
+<section class="flex flex-col gap-space-sm pt-space-md border-t border-surface-container-high">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-primary">7. Grounded References Index</h3>
+<span class="font-code-sm text-code-sm text-secondary">Verified Chunks: 8</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="border-b border-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+<th class="py-2 pr-3">Ref</th>
+<th class="py-2 px-3">Artifact Source</th>
+<th class="py-2 px-3">Grounded Claim Anchor</th>
+<th class="py-2 pl-3 text-right">Confidence</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high">
+<tr class="hover:bg-surface-container-low/50">
+<td class="py-2.5 pr-3 font-code-sm font-bold text-primary">[1]</td>
+<td class="py-2.5 px-3 font-medium text-primary">BloombergNEF 2024 Energy Report</td>
+<td class="py-2.5 px-3 text-on-surface-variant">SSB cell costs modeled at $145/kWh vs. sodium at $55/kWh</td>
+<td class="py-2.5 pl-3 text-right font-code-sm text-secondary">99.1%</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50">
+<td class="py-2.5 pr-3 font-code-sm font-bold text-primary">[2]</td>
+<td class="py-2.5 px-3 font-medium text-primary">Nature Energy (Vol 9, 2024)</td>
+<td class="py-2.5 px-3 text-on-surface-variant">Lithium dendrite formation at critical current thresholds &gt;5 mA/cm²</td>
+<td class="py-2.5 pl-3 text-right font-code-sm text-secondary">98.4%</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50">
+<td class="py-2.5 pr-3 font-code-sm font-bold text-primary">[3]</td>
+<td class="py-2.5 px-3 font-medium text-primary">Toyota Tech Day Communiqué</td>
+<td class="py-2.5 px-3 text-on-surface-variant">Official target 2027-2028 commercial debut with Idemitsu sulfide lines</td>
+<td class="py-2.5 pl-3 text-right font-code-sm text-secondary">97.8%</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50">
+<td class="py-2.5 pr-3 font-code-sm font-bold text-primary">[4]</td>
+<td class="py-2.5 px-3 font-medium text-primary">US Dept of Energy Vehicle Tech</td>
+<td class="py-2.5 px-3 text-on-surface-variant">External compression pack penalty (5 MPa requirement)</td>
+<td class="py-2.5 pl-3 text-right font-code-sm text-secondary">96.3%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+<!-- View 2: Live Execution Logs (Hidden by default, switched via tab) -->
+<article class="hidden bg-surface-container-lowest rounded-xl p-space-lg sm:p-space-xl shadow-md flex flex-col gap-space-md" id="view-timeline">
+<div class="flex items-center justify-between pb-space-sm border-b border-surface-container-high">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary">Forensic Runtime Execution Trace</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Live streaming output from Gemini 2.5 Search Grounding Tool invocation</p>
+</div>
+<span class="px-space-sm py-1 rounded bg-secondary-container text-on-secondary-container font-code-sm text-code-sm">Exit 0 • Validated</span>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-xl font-code-sm text-code-sm text-on-surface flex flex-col gap-space-xs overflow-x-auto leading-relaxed">
+<span class="text-outline">[00:00.012] INFO: Session instantiated. AgentID=scout-gemini-v2.5-prod</span>
+<span class="text-outline">[00:00.045] PARSE: Query="Commercial viability of solid-state EV batteries by 2030"</span>
+<span class="text-secondary">[00:00.118] DECOMPOSE: Formulated 4 sub-queries for parallel ground dispatch:</span>
+<span class="pl-4 text-on-surface-variant">&gt;&gt; Q1: "solid state battery commercial vehicle timeline 2027 2028 2030"</span>
+<span class="pl-4 text-on-surface-variant">&gt;&gt; Q2: "solid state battery cost per kwh vs lfp 2030 bloombergnef"</span>
+<span class="pl-4 text-on-surface-variant">&gt;&gt; Q3: "dendrite growth critical current density sulfide solid electrolytes"</span>
+<span class="pl-4 text-on-surface-variant">&gt;&gt; Q4: "quantumscape powerco pilot production yield cobra process"</span>
+<span class="text-secondary">[00:01.240] TOOL_CALL: `@google/genai` search tool dispatched. Depth=Forensic.</span>
+<span class="text-outline">[00:02.812] SEARCH_RESULT: 34 URIs fetched. Sanitizing HTML, extracting main text blocks.</span>
+<span class="text-outline">[00:03.110] EMBED: Generating text-embedding-004 vectors for 142 extracted passages.</span>
+<span class="text-secondary">[00:03.490] RERANK: Top 8 grounding chunks isolated. Grounding threshold=0.91.</span>
+<span class="text-on-surface-variant">[00:03.820] CITATION_AUDIT: Pinned claim 1 to Chunk_ID[BNEF_2024_P12] (Confidence 0.991)</span>
+<span class="text-on-surface-variant">[00:03.890] CITATION_AUDIT: Pinned claim 2 to Chunk_ID[NAT_ENG_982] (Confidence 0.984)</span>
+<span class="text-on-surface-variant">[00:04.010] CITATION_AUDIT: Pinned claim 3 to Chunk_ID[TOYOTA_ENG_ROAD] (Confidence 0.978)</span>
+<span class="text-secondary font-semibold">[00:04.218] COMPLETE: Synthesized briefing validated. Total latency 4,218ms. Zero hallucinations.</span>
+</div>
+</article>
+<!-- View 3: Raw Grounding JSON (Hidden by default, switched via tab) -->
+<article class="hidden bg-surface-container-lowest rounded-xl p-space-lg sm:p-space-xl shadow-md flex flex-col gap-space-md" id="view-json">
+<div class="flex items-center justify-between pb-space-sm border-b border-surface-container-high">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary">Raw Grounding Metadata Payloads</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Direct protobuf inspection of grounding chunks and confidence scores</p>
+</div>
+<button class="px-space-md py-1 rounded bg-surface-container hover:bg-surface-container-high font-label-sm text-label-sm text-primary" id="btn-copy-json">Copy JSON</button>
+</div>
+<pre class="bg-surface-container-low p-space-md rounded-xl font-code-sm text-code-sm text-primary overflow-x-auto" id="json-code"><code>{
+  "agent": "scout-ai-grounded-search",
+  "model": "gemini-2.5-pro",
+  "grounding_metadata": {
+    "web_search_sources": [
+      {
+        "id": "1",
+        "title": "BloombergNEF Energy Storage Outlook: Solid-State Battery Timeline",
+        "url": "https://about.bnef.com/electric-transport/",
+        "grounding_score": 0.991
+      },
+      {
+        "id": "2",
+        "title": "Nature Energy: Critical Current Density Limits in Sulfide Electrolytes",
+        "url": "https://nature.com/articles/nenergy-2024-0192",
+        "grounding_score": 0.984
+      },
+      {
+        "id": "3",
+        "title": "Toyota Motor Corp Technical Briefing: Next-Gen Battery Production Roadmap",
+        "url": "https://global.toyota/en/mobility/next-gen-battery",
+        "grounding_score": 0.978
+      }
+    ],
+    "grounding_supports": [
+      {
+        "grounding_chunk_indices": [0],
+        "segment": {
+          "text": "Cell costs projected at $145/kWh in 2028 vs $75/kWh for advanced sodium &amp; LFP chemistries."
+        },
+        "confidence_scores": [0.991]
+      }
+    ]
+  }
+}</code></pre>
+</article>
+</main>
+</div>
+</div>
+<!-- Toast Notification Feedback Component -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-16 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-space-sm px-space-lg py-space-md rounded-xl bg-primary text-on-primary shadow-xl" id="toast-notification">
+<span class="material-symbols-outlined text-secondary text-[20px]">check_circle</span>
+<span class="font-body-sm text-body-sm font-medium" id="toast-message">Notification triggered</span>
+</div>
+</div>
+<script>
+  // DOM Elements
+  const queryInput = document.getElementById('query-input');
+  const clearQueryBtn = document.getElementById('clear-query-btn');
+  const btnRun = document.getElementById('btn-run-investigation');
+  const presetChips = document.querySelectorAll('.preset-chip');
+  const tabReport = document.getElementById('tab-report');
+  const tabTimeline = document.getElementById('tab-timeline');
+  const tabJson = document.getElementById('tab-json');
+  const viewReport = document.getElementById('view-report');
+  const viewTimeline = document.getElementById('view-timeline');
+  const viewJson = document.getElementById('view-json');
+  const btnCopyReport = document.getElementById('btn-copy-report');
+  const btnCopyJson = document.getElementById('btn-copy-json');
+  const toast = document.getElementById('toast-notification');
+  const toastMessage = document.getElementById('toast-message');
+  const citeBadges = document.querySelectorAll('.cite-badge');
+  const sourceCards = document.querySelectorAll('.source-card');
+
+  // Multi-Query Synthetic Data Registry
+  const researchDatabase = {
+    "Commercial viability of solid-state EV batteries by 2030": {
+      title: "Commercial Viability and Mass Production Timeline for Solid-State EV Batteries Toward the 2030 Horizon",
+      execSummary: "Solid-state lithium-metal batteries (SSBs) will achieve commercial automotive reality within high-end flagship vehicles between 2026 and 2028, but broad passenger-vehicle economic parity will not materialize before 2030. While prototype pouch and prismatic cells demonstrate volumetric energy densities exceeding 400–450 Wh/kg, manufacturing bottlenecks—predominantly high-temperature sintering yields of fragile ceramic separators and interfacial impedance under cycling—severely suppress early scale-up economics. Consequently, solid-state will comprise less than 3.5% of total electric vehicle battery demand by 2030."
+    },
+    "Regulatory frameworks for generative AI models in EU vs US": {
+      title: "Regulatory Divergence in Generative AI Governance: EU AI Act Enforcement vs. US Executive Order Directives",
+      execSummary: "The regulatory approaches of the European Union and the United States toward generative frontier models represent fundamentally opposing doctrines. The EU AI Act enacts a binding, extraterritorial tiered compliance regime penalizing high-risk foundational models with fines up to 7% of global turnover, establishing centralized systemic risk audits. In contrast, the United States continues to rely on decentralized agency mandates guided by NIST risk management frameworks and FTC consumer protection enforcements, prioritizing open-source competitiveness and computational velocity over preemptive statutory gatekeeping."
+    },
+    "Advances in ambient temperature superconductor replications": {
+      title: "Epistemic Status of Ambient-Temperature Superconductivity Replications: Post-LK-99 Diagnostic Meta-Analysis",
+      execSummary: "Rigorous international replication efforts have conclusively determined that initial claims of ambient-temperature, ambient-pressure superconductivity (notably LK-99 and related modified lead-apatite compounds) stemmed from ferromagnetic and semiconductor artifacts. Specifically, the sharp precipitations in electrical resistance were caused by phase transitions in copper sulfide (Cu2S) impurities rather than Cooper pairing. Current state-of-the-art superhydride research remains strictly confined to extreme diamond-anvil cell pressures (>150 GPa)."
+    },
+    "Impact of weight-loss GLP-1 agonists on healthcare economics": {
+      title: "Macroeconomic & Actuarial Impact of GLP-1 Receptor Agonists on Public Health Payers and Chronic Care Budgets",
+      execSummary: "While glucagon-like peptide-1 (GLP-1) receptor agonists demonstrate unprecedented efficacy in mitigating obesity and secondary cardiovascular events (reducing MACE risk by up to 20%), their immediate budgetary impact threatens acute insolvency for public and self-insured employer plans. With annual per-patient treatment costs averaging $10,000 to $13,500 in North America, universal adoption requires upfront expenditure that exceeds the present value of downstream offsets (bariatric surgeries, joint replacements, and dialysis avoidance) across typical 3-to-5 year insurance enrollment horizons."
+    }
+  };
+
+  // Toast Trigger Helper
+  function showToast(text) {
+    toastMessage.textContent = text;
+    toast.classList.remove('translate-y-16', 'opacity-0');
+    toast.classList.add('translate-y-0', 'opacity-100');
+    setTimeout(() => {
+      toast.classList.remove('translate-y-0', 'opacity-100');
+      toast.classList.add('translate-y-16', 'opacity-0');
+    }, 3200);
+  }
+
+  // Clear Query Input
+  clearQueryBtn.addEventListener('click', () => {
+    queryInput.value = '';
+    queryInput.focus();
+  });
+
+  // Tab View Switcher
+  function setActiveTab(activeBtn, targetView) {
+    [tabReport, tabTimeline, tabJson].forEach(btn => {
+      btn.className = "view-tab px-space-md py-1 rounded-lg text-on-surface-variant hover:text-primary font-label-md text-label-md transition-colors";
+    });
+    activeBtn.className = "view-tab px-space-md py-1 rounded-lg bg-surface-container-lowest text-primary font-label-md text-label-md shadow-sm";
+
+    [viewReport, viewTimeline, viewJson].forEach(view => view.classList.add('hidden'));
+    targetView.classList.remove('hidden');
+  }
+
+  tabReport.addEventListener('click', () => setActiveTab(tabReport, viewReport));
+  tabTimeline.addEventListener('click', () => setActiveTab(tabTimeline, viewTimeline));
+  tabJson.addEventListener('click', () => setActiveTab(tabJson, viewJson));
+
+  // Switch Query via Preset Chips
+  presetChips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      const query = chip.getAttribute('data-query');
+      queryInput.value = query;
+      loadSyntheticReport(query);
+      showToast(`Agent synthesized evidence for: "${query.substring(0, 34)}..."`);
+    });
+  });
+
+  // Action Button Runner
+  btnRun.addEventListener('click', () => {
+    const val = queryInput.value.trim();
+    if (!val) {
+      showToast("Please enter a research prompt.");
+      return;
+    }
+    btnRun.innerHTML = `<span class="material-symbols-outlined text-[20px] animate-spin">refresh</span><span>Synthesizing...</span>`;
+    btnRun.disabled = true;
+
+    setTimeout(() => {
+      btnRun.innerHTML = `<span class="material-symbols-outlined text-[20px]">manage_search</span><span>Initialize Grounded Research</span><span class="px-1.5 py-0.5 rounded bg-surface-container-lowest/20 font-code-sm text-[10px]">⌥↵</span>`;
+      btnRun.disabled = false;
+      loadSyntheticReport(val);
+      showToast("Investigation completed: 8 grounded claims verified.");
+    }, 700);
+  });
+
+  // Update Dynamic Report Text
+  function loadSyntheticReport(query) {
+    const reportTitleElem = document.getElementById('report-title');
+    const record = researchDatabase[query];
+
+    if (record) {
+      reportTitleElem.textContent = record.title;
+    } else {
+      reportTitleElem.textContent = `Investigative Synthesis: ${query}`;
+    }
+    setActiveTab(tabReport, viewReport);
+  }
+
+  // Interactive Citation Highlighting
+  citeBadges.forEach(badge => {
+    badge.addEventListener('mouseenter', () => {
+      const citeNum = badge.getAttribute('data-cite');
+      highlightSource(citeNum);
+    });
+
+    badge.addEventListener('mouseleave', () => {
+      resetSources();
+    });
+
+    badge.addEventListener('click', () => {
+      const citeNum = badge.getAttribute('data-cite');
+      highlightSource(citeNum);
+      const card = document.querySelector(`.source-card[data-source-id="${citeNum}"]`);
+      if (card) {
+        card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    });
+  });
+
+  sourceCards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      const id = card.getAttribute('data-source-id');
+      highlightBadges(id);
+    });
+    card.addEventListener('mouseleave', () => {
+      resetBadges();
+    });
+  });
+
+  function highlightSource(id) {
+    sourceCards.forEach(c => {
+      if (c.getAttribute('data-source-id') === id) {
+        c.classList.add('ring-2', 'ring-secondary', 'bg-secondary-container/40');
+      } else {
+        c.classList.remove('ring-2', 'ring-secondary', 'bg-secondary-container/40');
+      }
+    });
+  }
+
+  function resetSources() {
+    sourceCards.forEach(c => {
+      c.classList.remove('ring-2', 'ring-secondary', 'bg-secondary-container/40');
+    });
+  }
+
+  function highlightBadges(id) {
+    citeBadges.forEach(b => {
+      if (b.getAttribute('data-cite') === id) {
+        b.classList.add('ring-2', 'ring-primary', 'bg-primary', 'text-on-primary');
+      } else {
+        b.classList.remove('ring-2', 'ring-primary', 'bg-primary', 'text-on-primary');
+      }
+    });
+  }
+
+  function resetBadges() {
+    citeBadges.forEach(b => {
+      b.classList.remove('ring-2', 'ring-primary', 'bg-primary', 'text-on-primary');
+    });
+  }
+
+  // Clipboard Copiers
+  btnCopyReport.addEventListener('click', () => {
+    const textToCopy = `# ${document.getElementById('report-title').textContent}\n\n${document.querySelector('article#view-report').innerText}`;
+    navigator.clipboard.writeText(textToCopy).then(() => {
+      showToast("Report copied to clipboard in Markdown format.");
+    }).catch(() => {
+      showToast("Report copied to clipboard.");
+    });
+  });
+
+  btnCopyJson.addEventListener('click', () => {
+    const code = document.getElementById('json-code').innerText;
+    navigator.clipboard.writeText(code).then(() => {
+      showToast("Grounding JSON schema copied.");
+    });
+  });
+</script></main></div>
+
+</body></html>
