@@ -100,7 +100,7 @@ PORT=3001
 npm run dev
 ```
 - Frontend will open at: `http://localhost:5173`
-- Backend API will run at: `http://localhost:3001`
+- Backend API will run at: `http://localhost:3000`
 
 #### Production Mode
 Build the client and start the self-contained server:
@@ -108,7 +108,7 @@ Build the client and start the self-contained server:
 npm run build
 npm start
 ```
-- The application will be served at: `http://localhost:3001`
+- The application will be served at: `http://localhost:3000`
 
 ---
 
